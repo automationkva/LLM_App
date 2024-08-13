@@ -40,7 +40,7 @@ def generate(model, query, temperature=0):
 
 
 if __name__ == "__main__":
-    model = models[2]
+    model = models[0]
     query = "which is bigger? 9.11 or 9.9?"
     result = generate(model, query, temperature=1)
     print(result)

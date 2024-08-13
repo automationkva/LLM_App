@@ -29,7 +29,7 @@
 # FastAPI app object, and Uvicorn is responsible for serving it. The --reload flag is useful during development as it automatically reloads the 
 # server whenever you make changes to your code.
 
-
+In Testing the Code in VS Code:
 - Run app.py in your terminal using uvicorn
 - The local host and port become active and the API server starts listening to them for requests
 - Send a request to this host and port from Postman
