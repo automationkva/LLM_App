@@ -28,3 +28,8 @@
 # Example Usage: After defining your FastAPI app, you might run it with a command like uvicorn main:app --reload. Here, main:app refers to your 
 # FastAPI app object, and Uvicorn is responsible for serving it. The --reload flag is useful during development as it automatically reloads the 
 # server whenever you make changes to your code.
+
+
+- Run app.py in your terminal using uvicorn
+- The local host and port become active and the API server starts listening to them for requests
+- Send a request to this host and port from Postman
