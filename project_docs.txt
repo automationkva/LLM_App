@@ -4,14 +4,12 @@
 # Install all dependencies in requirements.txt by running the command: pip install -r requirements.txt
 # Create the .env file and add the Groq API key
 # Build the simple.py app
-
-
+# Implement the API (app.py) and expose the endpoint 
 
 
 # == groq is the library we use to access the Groq platform, which gives us access to top open-source models. It also gives us accelerated inference on those 
 # models so we don't have to load them locally when trying to get inference from them.
 # == python-dotenv is a library used to load environment variables from .env
-
 
 # == Groq is a hardware platform for deploying LLMs that require significant computational power. It's used to accelerate the inference phase, which
 # is when the model is used to generate predictions or outputs from new data.

@@ -5,11 +5,12 @@
 """
 
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
-from simple import *
+# from fastapi.responses import JSONResponse - Commenented out bcos we can now return an object from fastapi call. So, no need to Jsonify responses again; for instance, health() already returns an object
+from simple import *  # * will import all the functions and variables in simple scripts
 
 app = FastAPI()
 
+# Ideally, it's good to have a healthcheker as the first thing in an API. Here, We define a health checker to determine that the API is running fine. At this point, we aren't passing any request to the app
 @app.get('/healthz')
 async def health():
     return {
@@ -17,7 +18,7 @@ async def health():
         "message": "running succesfully"
     }
 
-
+# We use a post request to pass request to the endpoint
 @app.post('/chat')
 async def generate_chat(request: Request):
 
@@ -47,7 +48,7 @@ async def generate_chat(request: Request):
         "response": response
     }
 
-
+# Start the app on the host and port specified, we can then make a call to it from postman
 if __name__ == "__main__":
     import uvicorn
     print("Starting LLM API")
