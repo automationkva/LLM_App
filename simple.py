@@ -3,6 +3,7 @@
 import os
 import groq
 from dotenv import load_dotenv
+
 load_dotenv() # Instantiate load_dotenv. It parses the .env file and then load all the variables found as environment variables
 
 # Set GROQ_API_KEY = "your api key" in the .env file, then load it below
@@ -22,7 +23,10 @@ models = [
     "mixtral-8x7b-32768"
 ]
 
-# Create a function that can take in the arguments for the model and user query to be passed to the model. The keyword argument temperature (min 0 and max 2) helps in testing how well the model performs under each temperature. Temperature determines how probabilistic the model will be when generating the responses. The further from zero, the more creative the model will be and the higher the tendency for hallucinations.
+# Create a function that can take in the arguments for the model and user query to be passed to the model. The keyword argument temperature (min 0 and max 2)
+# helps in testing how well the model performs under each temperature. Temperature determines how probabilistic the model will be when generating the
+# responses. The further from zero, the more creative the model will be and the higher the tendency for hallucinations. Higher values like 0.8 and above
+# will make the output more random, while lower values like 0.2 or less will make it more focused and deterministic.
 def generate(model, query, temperature=0):
 
     response = groq_client.chat.completions.create(

@@ -15,7 +15,7 @@ app = FastAPI()
 async def health():
     return {
         "application": "Simple LLM API",
-        "message": "running succesfully"
+        "message": "Running Succesfully"
     }
 
 # We use a post request to pass request to the endpoint
@@ -51,5 +51,5 @@ async def generate_chat(request: Request):
 # Start the app on the host and port specified, we can then make a call to it from postman
 if __name__ == "__main__":
     import uvicorn
-    print("Starting LLM API")
-    uvicorn.run(app, host="0.0.0.0", reload=True)
+    print("Starting LLM API...")
+    uvicorn.run("app:app", host="127.0.0.1", port=5000, reload=True) # Note that in app:app, the first app refers to the script (which is also app in this case)
