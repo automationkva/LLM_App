@@ -48,12 +48,12 @@ To activate your virtual environment, run the following commands in your termina
 
 ```
 
-# To install all dependencies in your requirements.txt, run the following command in your terminal - Command Prompt:
+### To install all dependencies in your requirements.txt, run the following command in your terminal - Command Prompt:
 
 ```pip install -r requirements.txt```
 
 
-# To run app.py, run the following command in your terminal:
+### To run app.py, run the following command in your terminal:
 
 `uvicorn app:app --host 127.0.0.1 --port 5000 --reload`
 
@@ -87,14 +87,14 @@ Request body for testing in Postman
 - Uvicorn is a lightning-fast ASGI (Asynchronous Server Gateway Interface) server typically used to run FastAPI apps, handling incoming HTTP requests and routing them to the appropriate endpoints in your FastAPI app.
 - Example Scenario:
 Imagine you have an LLM deployed on Groq hardware. You want to provide access to this model via a web API so that users can interact with it (e.g., submit text and get predictions). Here's how it would work:
-    # Groq provides the compute resources or takes care of the computation involved in running your LLM model.
-    # FastAPI provides the API interface for users to interact with your model.
-    # Uvicorn is the server that runs your FastAPI app, handling incoming requests and responses efficiently.
+    * Groq provides the compute resources or takes care of the computation involved in running your LLM model.
+    * FastAPI provides the API interface for users to interact with your model.
+    * Uvicorn is the server that runs your FastAPI app, handling incoming requests and responses efficiently.
 
 - Example Usage: 
 After defining your FastAPI app (say, main.py), you can run it with the command ```uvicorn main:app --reload```. Here, main:app refers to your FastAPI app object, and Uvicorn is responsible for serving it. The --reload flag is useful during development as it automatically reloads the server whenever you make changes to your code.
 
 - In Testing the Code in VS Code:
-    # Run app.py in your terminal using uvicorn
-    # The local host and port become active and the API server starts listening to them for requests
-    # Send a request to this host and port from Postman
+    * Run app.py in your terminal using uvicorn
+    * The local host and port become active and the API server starts listening to them for requests
+    * Send a request to this host and port from Postman
